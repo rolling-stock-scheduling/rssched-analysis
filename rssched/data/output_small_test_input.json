@@ -1,0 +1,123 @@
+{
+  "info:": {
+    "runningTime": "0.01sec",
+    "numberOfThreads": 16,
+    "timestamp(UTC)": "2024-04-08T13:45:33",
+    "hostname": "KPW02RYZ8"
+  },
+  "objectiveValue": {
+    "unservedPassengers": 0,
+    "vehicleCount": 3,
+    "seatDistanceTraveled": 1350000
+  },
+  "schedule": {
+    "depotLoads": [
+      {
+        "depot": "depot2",
+        "load": []
+      },
+      {
+        "depot": "depot1",
+        "load": [
+          {
+            "vehicleType": "vt1",
+            "spawnCount": 3
+          }
+        ]
+      }
+    ],
+    "tours": [
+      {
+        "vehicleId": "v00000",
+        "vehicleType": "vt1",
+        "startDepot": "depot1",
+        "endDepot": "depot1",
+        "tour": [
+          {
+            "serviceTrip": {
+              "id": "trip1",
+              "origin": "loc1",
+              "destination": "loc2",
+              "departure_time": "2023-07-24T11:59:41",
+              "arrival_time": "2023-07-24T12:59:41"
+            }
+          },
+          {
+            "deadHeadTrip": {
+              "origin": "loc2",
+              "destination": "loc1",
+              "departure_time": "2023-07-24T12:59:41",
+              "arrival_time": "2023-07-24T14:44:41"
+            }
+          }
+        ]
+      },
+      {
+        "vehicleId": "v00001",
+        "vehicleType": "vt1",
+        "startDepot": "depot1",
+        "endDepot": "depot1",
+        "tour": [
+          {
+            "deadHeadTrip": {
+              "origin": "loc1",
+              "destination": "loc2",
+              "departure_time": "2023-07-24T11:44:41",
+              "arrival_time": "2023-07-24T11:59:41"
+            }
+          },
+          {
+            "serviceTrip": {
+              "id": "trip2",
+              "origin": "loc2",
+              "destination": "loc3",
+              "departure_time": "2023-07-24T11:59:41",
+              "arrival_time": "2023-07-24T13:59:41"
+            }
+          },
+          {
+            "deadHeadTrip": {
+              "origin": "loc3",
+              "destination": "loc1",
+              "departure_time": "2023-07-24T13:59:41",
+              "arrival_time": "2023-07-24T14:54:41"
+            }
+          }
+        ]
+      },
+      {
+        "vehicleId": "v00002",
+        "vehicleType": "vt1",
+        "startDepot": "depot1",
+        "endDepot": "depot1",
+        "tour": [
+          {
+            "deadHeadTrip": {
+              "origin": "loc1",
+              "destination": "loc2",
+              "departure_time": "2023-07-24T11:44:41",
+              "arrival_time": "2023-07-24T11:59:41"
+            }
+          },
+          {
+            "serviceTrip": {
+              "id": "trip2",
+              "origin": "loc2",
+              "destination": "loc3",
+              "departure_time": "2023-07-24T11:59:41",
+              "arrival_time": "2023-07-24T13:59:41"
+            }
+          },
+          {
+            "deadHeadTrip": {
+              "origin": "loc3",
+              "destination": "loc1",
+              "departure_time": "2023-07-24T13:59:41",
+              "arrival_time": "2023-07-24T14:54:41"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
