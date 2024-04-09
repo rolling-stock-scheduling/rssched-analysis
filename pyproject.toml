@@ -2,7 +2,7 @@
 name = "rssched"
 version = "0.1.0"
 description = "Analysis and visualization of results from the rolling stock scheduling."
-authors = ["Merlin Unterfinger <merlin.unterfinger@sbb.ch>"]
+authors = ["Merlin Unterfinger"]
 license = "MIT"
 readme = "README.md"
 
