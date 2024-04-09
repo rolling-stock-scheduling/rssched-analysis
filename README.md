@@ -1,4 +1,4 @@
-# Rolling Stock Scheduling (RSSched) Output Analysis and Visualization
+# RSSched Output Analysis and Visualization
 
 Analysis and visualization of results from the scheduler service. Part of the Innosuisse project
 Rolling Stock Scheduling (RSSched) by SBB and ETH Zurich.
@@ -18,4 +18,4 @@ poetry install
 Visualize scheduler output as a Gantt chart:
 
 ```sh
-poetry run rssched-gantt rolling_stock_scheduling/data/small_test_output.json
+poetry run rssched-gantt rssched/data/output_small_test_input.json
