@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "rssched"
 version = "0.1.0"
-description = "Analysis and visualization of results from the rolling stock scheduling."
+description = "Analysis and visualization of results from the scheduler service."
 authors = ["Merlin Unterfinger"]
 license = "MIT"
 readme = "README.md"

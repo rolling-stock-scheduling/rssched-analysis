@@ -1,6 +1,7 @@
-# RSSched Output Analysis and Visualization
+# Rolling Stock Scheduling (RSSched) Output Analysis and Visualization
 
-Analysis and visualization of results from the rolling stock scheduling.
+Analysis and visualization of results from the scheduler service. Part of the Innosuisse project
+Rolling Stock Scheduling (RSSched) by SBB and ETH Zurich.
 
 ## Setup
 
