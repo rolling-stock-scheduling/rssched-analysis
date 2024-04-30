@@ -13,7 +13,7 @@ Rolling Stock Scheduling (RSSched) by SBB and ETH Zurich.
 poetry install
 ```
 
-## Gantt
+## Plots
 
 Visualize scheduler output:
 
