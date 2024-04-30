@@ -15,7 +15,7 @@ poetry install
 
 ## Gantt
 
-Visualize scheduler output as a Gantt chart:
+Visualize scheduler output:
 
 ```sh
-poetry run rssched-gantt rssched/data/output_small_test_input.json
+poetry run rssched-plot rssched/data/output_small_test_input.json

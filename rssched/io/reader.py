@@ -1,52 +1,39 @@
 import json
+import re
 from datetime import datetime
 from pathlib import Path
-from typing import List
 
-from rssched.model.response import (
-    Response,
-    ScheduleItem,
-    Trip,
-    TripType,
-)
+from rssched.model.response import Info, ObjectiveValue, Response, Schedule
 
 
 def parse_datetime(dt_str: str):
     return datetime.fromisoformat(dt_str)
 
 
+def camel_to_snake(name):
+    s1 = re.sub("(.)([A-Z][a-z]+)", r"\1_\2", name)
+    return re.sub("([a-z0-9])([A-Z])", r"\1_\2", s1).lower()
+
+
+def convert_keys_to_snake_case(data):
+    if isinstance(data, dict):
+        new_dict = {}
+        for k, v in data.items():
+            new_key = camel_to_snake(k)
+            new_dict[new_key] = convert_keys_to_snake_case(v)
+        return new_dict
+    elif isinstance(data, list):
+        return [convert_keys_to_snake_case(item) for item in data]
+    else:
+        return data
+
+
 def import_response(file_path: Path) -> Response:
     with open(file_path, "r", encoding="utf-8") as file:
-        data = json.load(file)
+        data = convert_keys_to_snake_case(json.load(file))
 
-    return Response(
-        schedule=[
-            ScheduleItem(
-                vehicle_id=item["vehicleId"],
-                vehicle_type=item["vehicleType"],
-                start_depot=item["startDepot"],
-                end_depot=item["endDepot"],
-                trips=create_tour(item["tour"]),
-            )
-            for item in data["schedule"]["tours"]
-        ],
-    )
+    info = Info(**data["info"])
+    objective_value = ObjectiveValue(**data["objective_value"])
+    schedule = Schedule(**data["schedule"])
 
-
-def create_tour(tour_data) -> List[Trip]:
-    trips = []
-    for item in tour_data:
-        for key, value in item.items():
-            trip_type = (
-                TripType.SERVICE if "service" in key.lower() else TripType.DEADHEAD
-            )
-            trip = Trip(
-                id=value.get("id"),
-                type=trip_type,
-                origin=value["origin"],
-                destination=value["destination"],
-                departure_time=parse_datetime(value["departure_time"]),
-                arrival_time=parse_datetime(value["arrival_time"]),
-            )
-            trips.append(trip)
-    return trips
+    return Response(info=info, objective_value=objective_value, schedule=schedule)
