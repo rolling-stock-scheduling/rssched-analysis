@@ -23,7 +23,7 @@ flake8 = "^7.0.0"
 pydocstyle = "^6.3.0"
 
 [tool.poetry.scripts]
-rssched-gantt = 'rssched.cli:app'
+rssched-plot = 'rssched.cli:app'
 
 [tool.isort]
 profile = "black"

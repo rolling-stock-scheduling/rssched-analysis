@@ -5,7 +5,7 @@ import typer
 from typer import Argument, echo
 
 from rssched.io.reader import import_response
-from rssched.visualization.gantt import response_to_gantt
+from rssched.visualization.plot import generate_plots
 
 app = typer.Typer()
 
@@ -14,7 +14,7 @@ app = typer.Typer()
 def main(source: Annotated[Path, Argument()]):
     echo(f"Render visualization(s): {source}")
     response = import_response(source)
-    for fig in response_to_gantt(response, source.stem):
+    for fig in generate_plots(response, source.stem):
         fig.show()
 
 

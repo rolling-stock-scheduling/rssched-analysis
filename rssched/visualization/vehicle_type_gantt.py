@@ -1,15 +1,10 @@
 import plotly.figure_factory as ff
 
 from rssched.model.response import Response
-
-CHART_COLORS = {
-    "ServiceTrip": "rgb(183, 183, 183)",
-    "MaintenanceSlot": "rgb(45, 50, 125)",
-    "DeadHeadTrip": "rgb(235, 0, 0)",
-}
+from rssched.visualization.colors import EVENT_TYPES
 
 
-def response_to_gantt(response: Response, instance_name: str):
+def plot_gantt_per_vehicle_type(response: Response, instance_name: str):
     figures = []
 
     for vehicle_type in response.schedule.fleet:
@@ -46,7 +41,7 @@ def response_to_gantt(response: Response, instance_name: str):
             ff.create_gantt(
                 vis_data,
                 title=f"Rolling stock schedule: {vehicle_type.vehicle_type} (instance: {instance_name})",
-                colors=CHART_COLORS,
+                colors=EVENT_TYPES,
                 index_col="Type",
                 show_colorbar=True,
                 group_tasks=True,
