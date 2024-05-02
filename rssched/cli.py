@@ -3,7 +3,7 @@ from typing import Annotated
 
 import typer
 from typer import Argument, echo
-
+import time
 from rssched.io.reader import import_response
 from rssched.visualization.plot import generate_plots
 
@@ -16,6 +16,7 @@ def main(source: Annotated[Path, Argument()]):
     response = import_response(source)
     for fig in generate_plots(response, source.stem):
         fig.show()
+        time.sleep(0.5)
 
 
 if __name__ == "__main__":
