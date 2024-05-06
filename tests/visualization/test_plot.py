@@ -6,4 +6,4 @@ from rssched.visualization.plot import generate_plots
 def test_generate_plots():
     response = import_response(PkgDataAccess.locate_response())
     figs = generate_plots(response, "test_instance")
-    assert len(figs) == 4
+    assert len(figs) == 6
