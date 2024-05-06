@@ -2,6 +2,7 @@ import pandas as pd
 import plotly.express as px
 
 from rssched.model.response import Response
+from rssched.visualization.colors import COLORS
 
 
 def plot_vehicle_utilization(response: Response, instance_name: str):
@@ -28,11 +29,12 @@ def plot_vehicle_utilization(response: Response, instance_name: str):
         y="Duration",
         color="Vehicle Type",
         title=f"Vehicle Utilization (instance: {instance_name})",
+        color_discrete_sequence=COLORS,
         labels={"Duration": "Total Hours"},
     )
     fig.update_layout(
         xaxis_title="Vehicle ID",
-        yaxis_title="Total Utilization [h]",
+        yaxis_title="Service Trip Time [h]",
         xaxis={"categoryorder": "total descending"},
     )
     fig.update_layout(hovermode="x", hoverdistance=50)
