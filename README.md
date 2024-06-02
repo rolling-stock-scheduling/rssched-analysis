@@ -5,13 +5,13 @@ Rolling Stock Scheduling (RSSched) by SBB and ETH Zurich.
 
 ## Setup
 
-1. install poetry: https://python-poetry.org/docs/
+1. install poetry a package manager for python: https://python-poetry.org/docs/
 
-2. run:
-
-```sh
-poetry install
-```
+2. install the dependencies for this project via:
+   
+   ```sh
+   poetry install
+   ```
 
 ## Plots
 
