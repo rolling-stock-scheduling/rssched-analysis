@@ -3,6 +3,10 @@
 Analysis and visualization of results from the scheduler service. Part of the Innosuisse project
 Rolling Stock Scheduling (RSSched) by SBB and ETH Zurich.
 
+# Usage
+
+To get started with the whole RSSched project, have a look at this [step-by-step instruction](https://github.com/rolling-stock-scheduling/.github/blob/main/getting_started.md).
+
 ## Setup
 
 1. install poetry a package manager for python: https://python-poetry.org/docs/
@@ -18,7 +22,7 @@ Rolling Stock Scheduling (RSSched) by SBB and ETH Zurich.
 Visualize scheduler output:
 
 ```sh
-poetry run rssched-plot rssched/data/output_small_test_input.json
+poetry run rssched-plot your/schedule.json
 ```
 
 ---
