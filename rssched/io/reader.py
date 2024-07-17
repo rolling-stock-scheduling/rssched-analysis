@@ -3,6 +3,7 @@ import re
 from datetime import datetime
 from pathlib import Path
 
+from rssched.model.request import Request
 from rssched.model.response import Info, ObjectiveValue, Response, Schedule
 
 
@@ -26,6 +27,12 @@ def convert_keys_to_snake_case(data):
         return [convert_keys_to_snake_case(item) for item in data]
     else:
         return data
+
+
+def import_request(file_path: Path) -> Request:
+    with open(file_path, "r", encoding="utf-8") as file:
+        data = convert_keys_to_snake_case(json.load(file))
+    return Request(**data)
 
 
 def import_response(file_path: Path) -> Response:
