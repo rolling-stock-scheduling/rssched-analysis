@@ -7,7 +7,13 @@ class PkgDataAccess:
         pass
 
     @staticmethod
+    def locate_request() -> Path:
+        data_folder = resources.files("rssched.data")
+        file_path = data_folder / "small_test_request.json"
+        return file_path
+
+    @staticmethod
     def locate_response() -> Path:
         data_folder = resources.files("rssched.data")
-        file_path = data_folder / "output_small_test_input.json"
+        file_path = data_folder / "small_test_response.json"
         return file_path
