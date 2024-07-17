@@ -1,43 +1,43 @@
 {
   "info": {
-    "runningTime": "0.05sec",
+    "runningTime": "0.00sec",
     "numberOfThreads": 16,
-    "timestampUTC": "2024-04-30T10:46:40",
-    "hostname": "KPW02RYZ8"
+    "timestampUTC": "2024-07-17T13:36:15",
+    "hostname": "563e4e8442e7"
   },
   "objectiveValue": {
     "unservedPassengers": 0,
     "maintenanceViolation": 0,
-    "vehicleCount": 7,
-    "costs": 6936400
+    "vehicleCount": 6,
+    "costs": 16678400
   },
   "schedule": {
     "depotLoads": [
       {
-        "depot": "0",
+        "depot": "depot_ZH",
         "load": [
           {
-            "vehicleType": "0",
+            "vehicleType": "IC",
             "spawnCount": 1
           },
           {
-            "vehicleType": "1",
-            "spawnCount": 4
+            "vehicleType": "IR",
+            "spawnCount": 3
           }
         ]
       },
       {
-        "depot": "2",
-        "load": []
-      },
-      {
-        "depot": "1",
+        "depot": "depot_BN",
         "load": [
           {
-            "vehicleType": "0",
+            "vehicleType": "IC",
             "spawnCount": 2
           }
         ]
+      },
+      {
+        "depot": "OVERFLOW_DEPOT",
+        "load": []
       }
     ],
     "fleet": [
@@ -45,36 +45,36 @@
         "vehicleType": "IC",
         "vehicles": [
           {
-            "id": "veh_3",
-            "startDepot": "depot_BN",
-            "endDepot": "depot_ZH",
-            "departureSegments": [
-              {
-                "departureSegment": "trip_1_seg_0",
-                "origin": "BN",
-                "destination": "LU",
-                "departure": "2023-07-24T12:00:00",
-                "arrival": "2023-07-24T14:00:00"
-              }
-            ],
-            "maintenanceSlots": [],
-            "deadHeadTrips": [
-              {
-                "id": "dht_0",
-                "origin": "LU",
-                "destination": "ZH",
-                "departure": "2023-07-24T14:00:00",
-                "arrival": "2023-07-24T14:55:00"
-              }
-            ]
-          },
-          {
             "id": "veh_4",
             "startDepot": "depot_BN",
+            "endDepot": "depot_BN",
+            "departureSegments": [
+              {
+                "departureSegment": "trip_1a_seg_0",
+                "origin": "BN",
+                "destination": "LU",
+                "departure": "2023-07-24T12:00:00",
+                "arrival": "2023-07-24T14:00:00"
+              }
+            ],
+            "maintenanceSlots": [],
+            "deadHeadTrips": [
+              {
+                "id": "dht_0",
+                "origin": "LU",
+                "destination": "BN",
+                "departure": "2023-07-24T14:00:00",
+                "arrival": "2023-07-24T15:11:40"
+              }
+            ]
+          },
+          {
+            "id": "veh_5",
+            "startDepot": "depot_BN",
             "endDepot": "depot_ZH",
             "departureSegments": [
               {
-                "departureSegment": "trip_1_seg_0",
+                "departureSegment": "trip_1a_seg_0",
                 "origin": "BN",
                 "destination": "LU",
                 "departure": "2023-07-24T12:00:00",
@@ -93,12 +93,12 @@
             ]
           },
           {
-            "id": "veh_9",
+            "id": "veh_6",
             "startDepot": "depot_ZH",
-            "endDepot": "depot_ZH",
+            "endDepot": "depot_BN",
             "departureSegments": [
               {
-                "departureSegment": "trip_1_seg_0",
+                "departureSegment": "trip_1b_seg_0",
                 "origin": "BN",
                 "destination": "LU",
                 "departure": "2023-07-24T14:00:00",
@@ -124,18 +124,18 @@
               {
                 "id": "dht_1",
                 "origin": "LU",
-                "destination": "ZH",
+                "destination": "BN",
                 "departure": "2023-07-24T16:00:00",
-                "arrival": "2023-07-24T16:55:00"
+                "arrival": "2023-07-24T17:11:40"
               }
             ]
           }
         ],
         "vehicleCycles": [
           [
-            "veh_9",
-            "veh_3",
-            "veh_4"
+            "veh_6",
+            "veh_4",
+            "veh_5"
           ]
         ]
       },
@@ -143,17 +143,10 @@
         "vehicleType": "IR",
         "vehicles": [
           {
-            "id": "veh_2",
+            "id": "veh_0",
             "startDepot": "depot_ZH",
-            "endDepot": "depot_BN",
+            "endDepot": "depot_ZH",
             "departureSegments": [
-              {
-                "departureSegment": "trip_0_seg_0",
-                "origin": "ZH",
-                "destination": "LU",
-                "departure": "2023-07-24T12:00:00",
-                "arrival": "2023-07-24T12:30:00"
-              },
               {
                 "departureSegment": "trip_0_seg_1",
                 "origin": "LU",
@@ -162,60 +155,35 @@
                 "arrival": "2023-07-24T13:10:00"
               }
             ],
-            "maintenanceSlots": [],
-            "deadHeadTrips": []
-          },
-          {
-            "id": "veh_12",
-            "startDepot": "depot_ZH",
-            "endDepot": "depot_BN",
-            "departureSegments": [],
             "maintenanceSlots": [
               {
-                "maintenanceSlot": "maintenance_slot_1",
-                "location": "BN",
-                "start": "2023-07-24T12:00:00",
-                "end": "2023-07-24T18:00:00"
+                "maintenanceSlot": "maintenance_slot_0",
+                "location": "ZH",
+                "start": "2023-07-24T06:00:00",
+                "end": "2023-07-24T12:00:00"
               }
             ],
-            "deadHeadTrips": [
-              {
-                "id": "dht_0",
-                "origin": "ZH",
-                "destination": "BN",
-                "departure": "2023-07-24T11:45:00",
-                "arrival": "2023-07-24T12:00:00"
-              }
-            ]
-          },
-          {
-            "id": "veh_14",
-            "startDepot": "depot_ZH",
-            "endDepot": "depot_BN",
-            "departureSegments": [
-              {
-                "departureSegment": "trip_0_seg_1",
-                "origin": "LU",
-                "destination": "BN",
-                "departure": "2023-07-24T12:40:00",
-                "arrival": "2023-07-24T13:10:00"
-              }
-            ],
-            "maintenanceSlots": [],
             "deadHeadTrips": [
               {
                 "id": "dht_0",
                 "origin": "ZH",
                 "destination": "LU",
-                "departure": "2023-07-24T12:30:00",
-                "arrival": "2023-07-24T12:40:00"
+                "departure": "2023-07-24T12:00:00",
+                "arrival": "2023-07-24T12:15:00"
+              },
+              {
+                "id": "dht_1",
+                "origin": "BN",
+                "destination": "ZH",
+                "departure": "2023-07-24T13:10:00",
+                "arrival": "2023-07-24T14:55:00"
               }
             ]
           },
           {
-            "id": "veh_16",
+            "id": "veh_1",
             "startDepot": "depot_ZH",
-            "endDepot": "depot_BN",
+            "endDepot": "depot_ZH",
             "departureSegments": [
               {
                 "departureSegment": "trip_0_seg_0",
@@ -233,22 +201,60 @@
               }
             ],
             "maintenanceSlots": [],
-            "deadHeadTrips": []
+            "deadHeadTrips": [
+              {
+                "id": "dht_0",
+                "origin": "BN",
+                "destination": "ZH",
+                "departure": "2023-07-24T13:10:00",
+                "arrival": "2023-07-24T14:55:00"
+              }
+            ]
+          },
+          {
+            "id": "veh_2",
+            "startDepot": "depot_ZH",
+            "endDepot": "depot_ZH",
+            "departureSegments": [
+              {
+                "departureSegment": "trip_0_seg_0",
+                "origin": "ZH",
+                "destination": "LU",
+                "departure": "2023-07-24T12:00:00",
+                "arrival": "2023-07-24T12:30:00"
+              },
+              {
+                "departureSegment": "trip_0_seg_1",
+                "origin": "LU",
+                "destination": "BN",
+                "departure": "2023-07-24T12:40:00",
+                "arrival": "2023-07-24T13:10:00"
+              }
+            ],
+            "maintenanceSlots": [],
+            "deadHeadTrips": [
+              {
+                "id": "dht_0",
+                "origin": "BN",
+                "destination": "ZH",
+                "departure": "2023-07-24T13:10:00",
+                "arrival": "2023-07-24T14:55:00"
+              }
+            ]
           }
         ],
         "vehicleCycles": [
           [
-            "veh_12",
-            "veh_2",
-            "veh_16",
-            "veh_14"
+            "veh_0",
+            "veh_1",
+            "veh_2"
           ]
         ]
       }
     ],
     "departureSegments": [
       {
-        "departureSegment": "trip_1_seg_0",
+        "departureSegment": "trip_1a_seg_0",
         "origin": "BN",
         "destination": "LU",
         "departure": "2023-07-24T12:00:00",
@@ -256,18 +262,18 @@
         "vehicleType": "IC",
         "formation": [
           "veh_4",
-          "veh_3"
+          "veh_5"
         ]
       },
       {
-        "departureSegment": "trip_1_seg_0",
+        "departureSegment": "trip_1b_seg_0",
         "origin": "BN",
         "destination": "LU",
         "departure": "2023-07-24T14:00:00",
         "arrival": "2023-07-24T16:00:00",
         "vehicleType": "IC",
         "formation": [
-          "veh_9"
+          "veh_6"
         ]
       },
       {
@@ -278,8 +284,8 @@
         "arrival": "2023-07-24T12:30:00",
         "vehicleType": "IR",
         "formation": [
-          "veh_2",
-          "veh_16"
+          "veh_1",
+          "veh_2"
         ]
       },
       {
@@ -290,9 +296,9 @@
         "arrival": "2023-07-24T13:10:00",
         "vehicleType": "IR",
         "formation": [
-          "veh_2",
-          "veh_14",
-          "veh_16"
+          "veh_0",
+          "veh_1",
+          "veh_2"
         ]
       }
     ],
@@ -303,7 +309,8 @@
         "start": "2023-07-24T06:00:00",
         "end": "2023-07-24T12:00:00",
         "formation": [
-          "veh_9"
+          "veh_0",
+          "veh_6"
         ]
       },
       {
@@ -311,20 +318,18 @@
         "location": "BN",
         "start": "2023-07-24T12:00:00",
         "end": "2023-07-24T18:00:00",
-        "formation": [
-          "veh_12"
-        ]
+        "formation": []
       }
     ],
     "deadHeadTrips": [
       {
         "id": "dht_0",
         "origin": "LU",
-        "destination": "ZH",
+        "destination": "BN",
         "departure": "2023-07-24T14:00:00",
-        "arrival": "2023-07-24T14:55:00",
+        "arrival": "2023-07-24T15:11:40",
         "formation": [
-          "veh_3"
+          "veh_4"
         ]
       },
       {
@@ -334,7 +339,7 @@
         "departure": "2023-07-24T14:00:00",
         "arrival": "2023-07-24T14:55:00",
         "formation": [
-          "veh_4"
+          "veh_5"
         ]
       },
       {
@@ -344,37 +349,57 @@
         "departure": "2023-07-24T12:00:00",
         "arrival": "2023-07-24T12:20:00",
         "formation": [
-          "veh_9"
+          "veh_6"
         ]
       },
       {
         "id": "dht_1",
         "origin": "LU",
-        "destination": "ZH",
-        "departure": "2023-07-24T16:00:00",
-        "arrival": "2023-07-24T16:55:00",
-        "formation": [
-          "veh_9"
-        ]
-      },
-      {
-        "id": "dht_0",
-        "origin": "ZH",
         "destination": "BN",
-        "departure": "2023-07-24T11:45:00",
-        "arrival": "2023-07-24T12:00:00",
+        "departure": "2023-07-24T16:00:00",
+        "arrival": "2023-07-24T17:11:40",
         "formation": [
-          "veh_12"
+          "veh_6"
         ]
       },
       {
         "id": "dht_0",
         "origin": "ZH",
         "destination": "LU",
-        "departure": "2023-07-24T12:30:00",
-        "arrival": "2023-07-24T12:40:00",
+        "departure": "2023-07-24T12:00:00",
+        "arrival": "2023-07-24T12:15:00",
         "formation": [
-          "veh_14"
+          "veh_0"
+        ]
+      },
+      {
+        "id": "dht_1",
+        "origin": "BN",
+        "destination": "ZH",
+        "departure": "2023-07-24T13:10:00",
+        "arrival": "2023-07-24T14:55:00",
+        "formation": [
+          "veh_0"
+        ]
+      },
+      {
+        "id": "dht_0",
+        "origin": "BN",
+        "destination": "ZH",
+        "departure": "2023-07-24T13:10:00",
+        "arrival": "2023-07-24T14:55:00",
+        "formation": [
+          "veh_1"
+        ]
+      },
+      {
+        "id": "dht_0",
+        "origin": "BN",
+        "destination": "ZH",
+        "departure": "2023-07-24T13:10:00",
+        "arrival": "2023-07-24T14:55:00",
+        "formation": [
+          "veh_2"
         ]
       }
     ]
